@@ -1,0 +1,28 @@
+body{
+    background-image: url('background_image/Green\ Leaves\ N\ Bubbles\ Artistic\ Background.jpg');
+}
+#information_block{
+    margin-top: 30px;
+  
+}
+#house_of_buttons{
+    margin-top: 50px;
+}
+#closed_links{
+    margin-top: 60px;
+}
+h1,h3,h5{
+   
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+}
+#portfolio,#insta{
+    outline: 1px white solid;
+}
+#portfolio:hover,#insta:hover{
+    background-color:black;
+    
+}
+#dd1:hover,#dd2:hover{
+    background-color:#5c6bc0; 
+}

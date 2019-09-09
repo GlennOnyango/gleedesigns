@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Controller</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/home_page.css">
+</head>
+<body class="" >
+  <div class="col l12 m12 s12 ">
+        <nav class="nav-extended orange darken-4">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center"><h5 class="white-text">GlennTedd</h5></a>
+                        </div>
+                        <div class="nav-content ">
+                            <ul class="tabs tabs-transparent ">
+                                <li class="tab"><a href="#add_div" id="anchor_add" class="active white-text">Add </a></li>
+                                <li class="tab"><a href="#remove_div" id="anchor_re" class="white-text">REMOVE</a></li>
+                                <li class="tab" id="anchor_log" ><a class="white-text" href="http://localhost/Chiri_Man/index.html" >LOGOUT</a></li>
+                            </ul>
+                        </div>
+        </nav>
+    </div>
+    <div class="col l12 m12 s12 hide" id="add_div">
+        <div class="row">
+            <h5 class="center deep-orange-text">Load Image</h5>
+                    <form method="POST" target='votar' enctype="multipart/form-data" action="http://localhost/Chiri_Man/php/Upload.php" id="store-form" name="form-upload">
+                 
+                        <div class="col l4 m4 s12 input-field">
+                            <input class="validate black-text" type="text" id="name" name='name' >
+                            <label for="name" class="deep-orange-text">Enter name</label>
+                        </div>
+                        <div class="col l4 m4 s12 input-field ">
+                 <select class="validate " id="type_of_work" name='type_of_work' >
+                    <option value="">Select Type of Art</option>
+                    <option value="Graphical Design">Graphical Design</option>
+                    <option value="Motion Graphics">Motion Graphics</option>
+                    <option value="Animation">Animation</option>
+                    <option value="Video Editing">Video Editing</option>
+                    <option value="Painting and Drawing">Painting and Drawing</option>
+                    <option value="Vector and illustration">Vector and Illustration</option>
+    </select> </div>
+                        <div class="file-field input-field col l4 m4 s12">
+                                <div class="btn orange darken-4">
+                                        <span class="white-text">Select File</span>                            
+                                        <input type="file" name="File_to_be_uploaded" multiple>
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate black-text" type="text" id="text_file">
+                                      </div>
+                        </div>
+            
+            <div class="col l12 m12 s12">
+                <div class="center">
+                    <button type='submit ' class="btn white-text orange darken-4 " id="store">Store</button>
+                   <p class="green-text" id="reflector"></p>
+                </div>
+            </div>
+            </form>
+            <div class="col l12 m12 s12">
+                    <div class="row">
+                            <div class="col l12 s12 m12">
+                                <h5 class="center deep-orange-text">Login Credentials</h5>
+                                             </div>
+                           <div class="col l4 m3 s12 input-field">
+                               <label for="username" class="deep-orange-text">Username</label>
+                               <input type="text" id="username0" class="white-text validate">
+                           </div>
+                           <div class="col l4 m3 s12 input-field">
+                               <label for="password" class="deep-orange-text">Password</label>
+                               <input type="password" id="password0" class="white-text validate">
+                           </div>
+                           <div class="col l4 m3 s12 input-field">
+                                   <label for="confirm_password" class="deep-orange-text">Confirm Password</label>
+                                   <input type="text" id="confirm_password0" class="white-text validate">
+                           </div>
+                           <div class="col l12 m12 s12">
+                               <div class="center"><button class="btn deep-orange-text orange darken-4 white-text" id="Add_user">Add User</button> <label id="reciever" class="red-text"></label></div>
+                           </div>                
+                        </div>
+               
+               
+            </div>
+            
+            <div class="col l12 m12 s12">
+                    <div class="row">
+                            <div class="col l12 s12 m12">
+                                <h5 class="center deep-orange-text">Change Credentials</h5>
+                                             </div>
+                           <div class="col l4 m3 s12 input-field">
+                               <label for="username1" class="deep-orange-text">Username</label>
+                               <input type="text" id="username1" class="white-text validate">
+                           </div>
+                           <div class="col l4 m3 s12 input-field">
+                               <label for="password1" class="deep-orange-text">OldPassword</label>
+                               <input type="password" id="password1" class=" white-text validate">
+                           </div>
+                           <div class="col l4 m3 s12 input-field">
+                                   <label for="confirm_password1" class="deep-orange-text">NewPassword</label>
+                                   <input type="text" id="confirm_password1" class=" white-text validate">
+          
+                                </div>
+                           <div class="col l12 m12 s12">
+                                    <div class="center"><button class="btn white-text orange darken-4 " id="change_user">Change User</button> <label id='change_user1' class="red-text"></label> </div>
+                           
+                            </div>
+
+                        </div>
+               
+               
+            </div>
+                 </div>
+    </div>
+    <div class="col l12 m12 s12  hide" id="remove_div">
+        
+        <div class="row" id="remove_place">
+            
+        </div>
+    </div>
+ 
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/Animation.js"></script>
+     <script src="js/Notification.js"></script>
+    <script src="js/Remove.js"></script>
+    <script src="js/Login.js"></script>
+    <script src="js/upload.js"></script>
+    
+    <script src="js/Initialiation.js"></script>
+</body>
+</html>
